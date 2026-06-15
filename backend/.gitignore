@@ -15,3 +15,7 @@ node_modules
 dist
 .env
 .env.deploy
+
+# Environment files
+.env
+.env.deploy
