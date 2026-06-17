@@ -8,6 +8,7 @@ module.exports = {
   apps: [
     {
       name: "frontend",
+      script: "./build/index.html",
     },
   ],
   deploy: {
