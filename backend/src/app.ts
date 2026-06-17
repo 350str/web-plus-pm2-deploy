@@ -14,7 +14,7 @@ const app = express();
 mongoose.connect(DB_ADDRESS);
 
 app.use(cors({
-  origin: 'https://mesto.350str.nomorepartiessite.ru',
+  origin: ['https://mesto.350str.nomorepartiessite.ru', 'http://mesto.350str.nomorepartiessite.ru'],
   credentials: true,
 }));
 app.use(express.json());

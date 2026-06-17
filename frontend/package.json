@@ -17,7 +17,7 @@
     "build": "NODE_OPTIONS=--openssl-legacy-provider react-scripts build",
     "test": "NODE_OPTIONS=--openssl-legacy-provider react-scripts test",
     "eject": "NODE_OPTIONS=--openssl-legacy-provider react-scripts eject",
-    "deploy": "pm2 deploy production --force"
+    "deploy": "pm2 deploy production"
   },
   "eslintConfig": {
     "extends": [
