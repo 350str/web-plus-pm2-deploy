@@ -4,6 +4,8 @@ const {
   DEPLOY_USER, DEPLOY_HOST, DEPLOY_PATH, DEPLOY_REF, DEPLOY_REPO,
 } = process.env;
 
+const NVM_INIT = 'export NVM_DIR="$HOME/.nvm" && [ -s "$NVM_DIR/nvm.sh" ] && source "$NVM_DIR/nvm.sh"';
+
 module.exports = {
   apps: [
     {
@@ -17,7 +19,7 @@ module.exports = {
       ref: DEPLOY_REF,
       repo: DEPLOY_REPO,
       path: `${DEPLOY_PATH}`,
-      "post-deploy": `cd ${DEPLOY_PATH}/source/frontend && npm i && npm run build`,
+      "post-deploy": `${NVM_INIT} && cd ${DEPLOY_PATH}/source/frontend && npm i && npm run build`,
     },
   },
 };
