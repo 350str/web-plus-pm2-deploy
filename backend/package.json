@@ -8,7 +8,8 @@
     "start": "ts-node src/app.ts",
     "dev": "ts-node-dev src/app.ts",
     "lint": "npx eslint src/**/*.ts",
-    "deploy": "pm2 deploy production"
+    "deploy": "pm2 deploy production",
+    "deploy:setup": "pm2 deploy production setup"
   },
   "author": "Yandex.Praktikum",
   "license": "ISC",
