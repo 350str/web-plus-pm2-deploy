@@ -18,7 +18,7 @@ module.exports = {
       'pre-setup': `rm -rf ${DEPLOY_PATH}`,
       'pre-deploy-local': `scp .env ${DEPLOY_USER}@${DEPLOY_HOST}:${DEPLOY_PATH}/source/backend`,
       'post-deploy':
-        `${NVM_INIT} && cd ${DEPLOY_PATH}/source/backend && npm i && npm run build && pm2 start`,
+        `${NVM_INIT} && cd ${DEPLOY_PATH}/source/backend && npm i && npm run build && pm2 startOrRestart ecosystem.config.js --env production`,
     },
   },
 };
