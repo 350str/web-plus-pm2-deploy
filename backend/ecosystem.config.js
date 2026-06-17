@@ -4,8 +4,6 @@ const {
   DEPLOY_USER, DEPLOY_HOST, DEPLOY_PATH, DEPLOY_REF, DEPLOY_REPO,
 } = process.env;
 
-const NVM_INIT = 'export NVM_DIR="$HOME/.nvm" && [ -s "$NVM_DIR/nvm.sh" ] && source "$NVM_DIR/nvm.sh"';
-
 module.exports = {
   apps: [{ name: 'backend', script: './dist/app.js' }],
   deploy: {
@@ -17,8 +15,7 @@ module.exports = {
       path: `${DEPLOY_PATH}`,
       'pre-setup': `rm -rf ${DEPLOY_PATH}`,
       'pre-deploy-local': `scp .env ${DEPLOY_USER}@${DEPLOY_HOST}:${DEPLOY_PATH}/source/backend`,
-      'post-deploy':
-        `${NVM_INIT} && cd ${DEPLOY_PATH}/source/backend && npm i && npm run build && pm2 startOrRestart ecosystem.config.js --env production`,
+      'post-deploy': '~/deploy-backend.sh',
     },
   },
 };
