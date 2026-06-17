@@ -18,7 +18,7 @@ module.exports = {
       ref: DEPLOY_REF,
       repo: DEPLOY_REPO,
       path: `${DEPLOY_PATH}`,
-      "post-deploy": `~/deploy-frontend.sh`,
+      "post-deploy": `cd frontend && ./deploy.sh`,
     },
   },
 };
