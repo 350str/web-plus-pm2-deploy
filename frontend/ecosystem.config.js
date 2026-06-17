@@ -15,7 +15,7 @@ module.exports = {
       repo: DEPLOY_REPO,
       path: `${DEPLOY_PATH}/frontend`,
       'post-deploy':
-        '[ -s "$HOME/.nvm/nvm.sh" ] && . "$HOME/.nvm/nvm.sh"; npm ci && npm run build',
+        '. "$HOME/.nvm/nvm.sh" 2>/dev/null || true; npm ci && npm run build',
     },
   },
 };
