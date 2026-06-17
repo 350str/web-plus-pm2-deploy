@@ -16,6 +16,4 @@ dist
 .env
 .env.deploy
 
-# Environment files
-.env
-.env.deploy
+
