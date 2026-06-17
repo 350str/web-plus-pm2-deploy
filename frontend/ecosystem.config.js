@@ -9,6 +9,7 @@ module.exports = {
     {
       name: "frontend",
       script: "echo",
+      autorestart: false,
     },
   ],
   deploy: {
