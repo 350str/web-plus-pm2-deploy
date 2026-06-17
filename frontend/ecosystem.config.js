@@ -5,13 +5,7 @@ const {
 } = process.env;
 
 module.exports = {
-  apps: [
-    {
-      name: "frontend",
-      script: "echo",
-      autorestart: false,
-    },
-  ],
+  apps: [],
   deploy: {
     production: {
       user: DEPLOY_USER,

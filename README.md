@@ -2,5 +2,6 @@
 
 Стартеркит проекта по автоматизации деплоя фронтенда и бэкенда при помощи pm2 (pm2 deploy)
 
-url https://mesto.350str.nomorepartiessite.ru/
-ip 158.160.23.13
+IP адрес 158.160.23.13
+Frontend https://mesto.350str.nomorepartiessite.ru/
+Backend https://api.mesto.350str.nomorepartiessite.ru/

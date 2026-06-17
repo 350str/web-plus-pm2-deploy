@@ -5,4 +5,3 @@ export NVM_DIR="$HOME/.nvm"
 cd /home/owner/web-plus-pm2-deploy/current/frontend
 npm i
 npm run build
-pm2 startOrRestart ecosystem.config.js --env production
