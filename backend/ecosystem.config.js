@@ -17,7 +17,7 @@ module.exports = {
       path: `${DEPLOY_PATH}/backend`,
       'pre-deploy': `scp ${__dirname}/.env ${DEPLOY_USER}@${DEPLOY_HOST}:${DEPLOY_PATH}/backend/current/backend`,
       'post-deploy':
-        'npm ci --omit=dev && npm run build && pm2 reload ecosystem.config.js --env production',
+        '[ -s "$HOME/.nvm/nvm.sh" ] && . "$HOME/.nvm/nvm.sh"; npm ci --omit=dev && npm run build && pm2 reload ecosystem.config.js --env production',
     },
   },
 };

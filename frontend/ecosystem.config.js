@@ -14,7 +14,8 @@ module.exports = {
       ref: DEPLOY_REF,
       repo: DEPLOY_REPO,
       path: `${DEPLOY_PATH}/frontend`,
-      'post-deploy': 'npm ci && npm run build',
+      'post-deploy':
+        '[ -s "$HOME/.nvm/nvm.sh" ] && . "$HOME/.nvm/nvm.sh"; npm ci && npm run build',
     },
   },
 };
