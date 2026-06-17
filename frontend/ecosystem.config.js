@@ -1,5 +1,4 @@
-const dontenv = require("dotenv");
-dontenv.config({ path: "./.env.deploy" });
+require("dotenv").config({ path: "./.env.deploy" });
 
 const {
   DEPLOY_USER, DEPLOY_HOST, DEPLOY_PATH, DEPLOY_REF, DEPLOY_REPO,
@@ -18,7 +17,7 @@ module.exports = {
       ref: DEPLOY_REF,
       repo: DEPLOY_REPO,
       path: `${DEPLOY_PATH}`,
-      "post-deploy": "pwd && cd frontend && npm ci && npm run build",
+      "post-deploy": `cd ${DEPLOY_PATH}/source/frontend && npm i && npm run build`,
     },
   },
 };
